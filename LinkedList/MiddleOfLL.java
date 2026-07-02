@@ -1,7 +1,7 @@
 package LinkedList;
 
 public class MiddleOfLL {
-    public static int middleOfLL(Node head){
+    public static Node middleOfLL(Node head){
         
         Node slow = head;
         Node fast = head;
@@ -9,7 +9,7 @@ public class MiddleOfLL {
             slow = slow.next;
             fast = fast.next.next;
         }
-        return slow.data;
+        return slow;
     }
     public static void main(String[] args){
         Node head = new Node(1);
@@ -17,6 +17,6 @@ public class MiddleOfLL {
         head.next.next = new Node(3);
         head.next.next.next = new Node(4);
         head.next.next.next.next = new Node(5);
-        System.out.println(middleOfLL(head));
+        System.out.println(middleOfLL(head).data);
     }
 }

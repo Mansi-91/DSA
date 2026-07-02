@@ -30,4 +30,13 @@ public class LinkedListUtils {
         tail.next = newNode;
         tail = newNode;
     }
+    public static int sizeOfLL(Node head){
+        Node temp = head;
+        int size =0;
+        while(temp != null){
+            size++;
+            temp = temp.next;
+        }
+        return size;
+    }
 }
